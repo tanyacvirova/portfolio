@@ -1,0 +1,59 @@
+:root {
+  --page-max-width: 1600px;
+  --page-padding: clamp(12px, 1.56vw, 20px);
+  --header-gap: clamp(8px, 0.94vw, 12px);
+  --footer-gap: clamp(8px, 0.94vw, 12px);
+  --card-padding: clamp(8px, 0.94vw, 12px);
+  --grid-gap: clamp(8px, 1.56vw, 20px);
+  --grid-gap-large: clamp(16px, 1.56vw, 24px);
+
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --step-display: clamp(1.75rem, 1.25rem + 1vw, 2.25rem);
+  --step-h1: clamp(1.375rem, 1.05rem + 0.55vw, 1.5rem);
+  --step-lead: clamp(1.125rem, 0.95rem + 0.4vw, 1.25rem);
+  --step-nav: clamp(1rem, 0.7rem + 0.8vw, 1.25rem);
+  --step-body: 1rem;
+  --step-small: 0.75rem;
+
+  --leading-display: 1.22;
+  --leading-heading: 1.17;
+  --leading-lead: 1.2;
+  --leading-body: 1.25;
+  --leading-small: 1.33;
+
+  --bg: #faf7f0;
+  --text: #1e1e1e;
+  --text-muted: rgb(30 30 30 / 70%);
+  --inverse: #faf7f0;
+  --card-hover: rgb(30 30 30 / 4%);
+  --chart-fill: rgb(146 198 234 / 40%);
+  --chart-accent: #92c6ea;
+  --chart-marker: #1e1e1e;
+  --chart-muted: #d0ccc4;
+  --chart-grid: rgb(30 30 30 / 10%);
+  --chart-flow: rgb(30 30 30 / 10%);
+  --map-districts: rgb(30 30 30 / 18%);
+  --map-roads: #ffffff;
+  --map-isochrones: #92c6ea;
+  --map-buildings: rgb(30 30 30 / 45%);
+}
+
+[data-theme="dark"] {
+  --bg: #191919;
+  --text: #f2f1f6;
+  --text-muted: rgb(242 241 246 / 80%);
+  --inverse: #191919;
+  --card-hover: rgb(242 241 246 / 6%);
+  --chart-fill: rgb(146 198 234 / 45%);
+  --chart-accent: #92c6ea;
+  --chart-marker: #f2f1f6;
+  --chart-muted: #5c5c5c;
+  --chart-grid: rgb(242 241 246 / 16%);
+  --chart-flow: #6a6a6a;
+  --map-districts: rgb(242 241 246 / 22%);
+  --map-roads: #f2f1f6;
+  --map-isochrones: #92c6ea;
+  --map-buildings: rgb(242 241 246 / 38%);
+}

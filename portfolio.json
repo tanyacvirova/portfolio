@@ -1,0 +1,696 @@
+{
+  "en": {
+    "site": {
+      "name": "Tanya Tsvirova",
+      "title": "Data visualisation engineer & designer",
+      "tagline": "Complex systems, spatial data, scientific and editorial stories.",
+      "email": "tanyacvirova@gmail.com"
+    },
+    "about": {
+      "text": "Hi! My name is Tanya Tsvirova. I design and build data products: research, UX/UI, and front-end when the project needs it.\n\nOver 5+ years I've shipped work at To Be Precise, 2GIS, Beeline, and RBC — charts, maps, calculators, and tools for public and executive audiences. Background in educational content and data journalism before focusing on interactive data products. I also taught visualisation courses at Yandex Practicum.\n\nCurrently based in Nagoya (Japan, GMT+9), open to remote.\n\ntanyacvirova@gmail.com"
+    },
+    "projects": {
+      "15-minute-city": {
+        "meta": {
+          "title": "15-minute city",
+          "cardDescription": "Part of a series of 2GIS Compass data stories showcasing spatial analytics.",
+          "description": "See where everyday services are within a 15-minute walk in four Russian megacities — without reading a methods paper.",
+          "cardTags": ["editorial", "spatial data"],
+          "client": "2GIS Compass, 2GIS urban brand media. 2GIS is a digital mapping and city navigation platform, one of the largest Internet companies in Russia (~50m MAU).",
+          "team": ["Data visualization specialist (me)", "analyst", "editor", "designer", "geo-development"],
+          "role": "Data analysis, maps, charts, scrollytelling scenario, and interactive widget specs with geo-dev; final visuals with project designers.",
+          "years": "2024–2025 (contract; multiple Compass releases)",
+          "stack": ["Python", "QGIS", "Figma"],
+          "links": [
+            { "label": "compass.2gis.ru/15-minute", "url": "https://compass.2gis.ru/15-minute/" },
+            { "label": "More Compass projects", "url": "https://compass.2gis.ru/" }
+          ]
+        },
+        "blocks": {
+          "problem": {
+            "text": "Compass needed data stories that work for readers and demonstrate what 2GIS spatial tools can do — including for a B2B audience. My focus on the 15-minute city piece: turn isochrones and POI data into a clear local map narrative, not a methods paper."
+          },
+          "summary": {
+            "items": [
+              "Found a story behind the picked technology: isochrones.",
+              "Analysed 2GIS POIs and 15-minute isochrones across four cities.",
+              "Maps and interactive widgets that make the spatial stack visible."
+            ]
+          },
+          "approach": {
+            "steps": [
+              {
+                "id": "reader-brief",
+                "title": "0. Reader & brief",
+                "body": "Reframed the question: not “is Russia a 15-minute country?” but “where does walkable access work locally?” Balanced editorial clarity for general readers with the client constraint — technology visible in the story, not only in a product demo.",
+                "images": []
+              },
+              {
+                "id": "data-analysis",
+                "title": "1. Data & analysis",
+                "body": "Worked with 2GIS places, service categories and 15-minute walking isochrones in four megacities. Compared neighbourhood access across centre, periphery and private-housing areas instead of collapsing each city into one index.",
+                "images": [
+                  {
+                    "src": "images/compass-1.png",
+                    "alt": "Isochrone maps for Nizhny Novgorod, Kazan and Saint Petersburg — apartment blocks vs private housing",
+                    "caption": "Results of the preliminary analysis: added a layer to the maps showing building types — detached houses and apartment buildings."
+                  }
+                ]
+              },
+              {
+                "id": "narrative-visuals",
+                "title": "2. Narrative & Visuals",
+                "body": "Cut overloaded drafts to a centre–periphery argument. Rejected a single hero score per city. Structured scroll order: one primary finding per section; detail moved to secondary maps where needed.",
+                "images": []
+              },
+              {
+                "id": "widgets",
+                "title": "3. Widgets & geo-dev",
+                "body": "With the geo-development team, shaped interactive map widgets for other Compass stories — e.g. station growth over time on Transport 2030. Same principle: spatial capabilities readable inside the narrative. Prepared final maps and charts with project designers.",
+                "images": [
+                  {
+                    "src": "images/compass-2.png",
+                    "alt": "Transport 2030 widget — isochrone timeline showing how district accessibility changes as stations open",
+                    "caption": "Final widget from “Transport 2030” I developed in collaboration with geo developers and a designer."
+                  }
+                ]
+              }
+            ]
+          },
+          "result": {
+            "text": "Published the 15-minute city long-read — a centre–periphery spatial story for four megacities (denser access in centres, weaker on edges and in private-housing areas). Also contributed interactive widget work on other Compass pages in the same series, including Transport 2030."
+          }
+        }
+      },
+      "social-indicators-data-explorer": {
+        "meta": {
+          "title": "Social indicators data explorer",
+          "cardDescription": "Explore key social indicators and compare Russian regions.",
+          "description": "Explore key social indicators and compare Russian regions — without downloading and cleaning large datasets.",
+          "cardTags": ["product design", "complex systems"],
+          "client": "To Be Precise, an independent think-tank that collects, cleans, and analyzes official and open-source statistics to study social problems in Russia (~50k MAU).",
+          "team": ["Product designer (me)", "analysts", "developers"],
+          "role": "End-to-end product design: UX logic, UI, states, mobile, and specs for engineering.",
+          "years": "May–Aug 2026",
+          "stack": ["Figma", "design tokens", "Dev Mode"],
+          "product": "Reusable indicator module based on charts.",
+          "links": [
+            {
+              "label": "tochno.st/problems/orphanhood",
+              "url": "https://tochno.st/problems/orphanhood"
+            }
+          ]
+        },
+        "blocks": {
+          "beforeAfter": {
+            "before": "Download a 10 MB+ archive and process data manually.",
+            "after": "Pick an indicator, compare regions, export or share the exact view in-app."
+          },
+          "problem": {
+            "text": "Readers and partners needed quick answers from data that lived only in rankings, studies, or heavy archives. The v1 goal: make region comparison within one curated metric fast enough that the team stops handling the same ad-hoc requests manually."
+          },
+          "summary": {
+            "items": [
+              "Reviewed bot requests and audience needs → scoped v1 to one dimension + region compare.",
+              "10+ web/mobile screens; adapted site design system for data UI.",
+              "Dev Mode handoff, QA across devices."
+            ]
+          },
+          "process": {
+            "steps": [
+              {
+                "id": "research",
+                "title": "0. Concept and research",
+                "body": "I reviewed recurring data requests to the team bot and talked with editors about how readers use problem pages. Insight: users with low technical skills need an interface layer on top of raw data — similar to OWID explorers.",
+                "images": []
+              },
+              {
+                "id": "prototypes",
+                "title": "1. Prototypes",
+                "body": "Early prototypes tried to support every display combination. After testing, I scoped v1 to selecting one metric and comparing regions — enough value without overwhelming the UI.",
+                "images": [
+                  {
+                    "src": "images/explorer-1.png",
+                    "alt": "Prototype flow — selecting a priority scenario for region comparison",
+                    "caption": "Process of selecting a priority scenario: the result is a comparison based on a single indicator across regions."
+                  }
+                ]
+              },
+              {
+                "id": "design",
+                "title": "2. Design",
+                "body": "I designed 10+ screens for web and mobile, adapting the site design system for charts: palette, icons, controls. Handoff via Figma Dev Mode with specs for states and edge cases.",
+                "images": [
+                  {
+                    "src": "images/explorer-2.png",
+                    "alt": "Figma screens — indicator constructor, mobile layouts, tooltips and export states",
+                    "caption": "Dev-ready final prototypes made in Figma."
+                  }
+                ]
+              },
+              {
+                "id": "qa",
+                "title": "3. Development support & QA",
+                "body": "I worked with developers on mockup fidelity and business logic, resolved design–dev trade-offs, and tested across devices and browsers before launch.",
+                "images": []
+              }
+            ]
+          },
+          "result": {
+            "text": "After launch, one-off data requests to the team bot dropped — the main internal success metric for v1. Readers can compare regions and export or share a view without asking the team for a custom slice."
+          }
+        }
+      },
+      "traffic-accident-fatalities": {
+        "meta": {
+          "title": "Traffic accident fatalities",
+          "cardDescription": "Explore how crash circumstances change fatality risk — and compare your scenario to all accidents in seconds.",
+          "description": "Explore how crash circumstances change fatality risk — and compare your scenario to all accidents in seconds.",
+          "cardTags": ["scientific", "complex systems"],
+          "client": "To Be Precise, an independent think-tank that collects, cleans, and analyzes official and open-source statistics to study social problems in Russia (~50k MAU).",
+          "team": ["Designer & front-end developer (me)", "analyst", "editor"],
+          "role": "Design and front-end development: interaction model, UI, filter logic, production code.",
+          "years": "Feb–June 2026",
+          "stack": ["Figma", "React", "TypeScript", "Vite", "d3.js", "Node.js", "Redis"],
+          "links": [{ "label": "calc.tochno.st/dtp/", "url": "https://calc.tochno.st/dtp/" }]
+        },
+        "blocks": {
+          "problem": {
+            "text": "The project's source data contained too many variables to display them all on static charts. There were two possible solutions: either select a subset of variables and discuss only a few of them, or allow the reader to make that choice themselves."
+          },
+          "summary": {
+            "items": [
+              "Framed the metric as lethality given a crash; mapped valid filter combinations in the dataset.",
+              "Developed an algorithm to find the required combination from over a million rows and created a Redis store that allows for responses within seconds.",
+              "Two-column UI: parameters stay editable while lethality vs baseline stays visible.",
+              "Designed in Figma and shipped in React + d3."
+            ]
+          },
+          "approach": {
+            "steps": [
+              {
+                "id": "data-logic",
+                "title": "0. Data & logic",
+                "body": "Mapped which filter combinations exist in the dataset and limited the UI to meaningful pairs — so users never hit dead-end states without explanation. Node.js back-end uses unique key based on combination of different parameters user selected.",
+                "images": [
+                  {
+                    "src": "images/dtp-1.png",
+                    "alt": "JSON data structure — fatality rates by accident type with confidence intervals",
+                    "caption": "The processed table used by the backend when requesting data."
+                  }
+                ]
+              },
+              {
+                "id": "ui",
+                "title": "1. UI & interaction",
+                "body": "Compared a long single-column form vs a side-by-side layout; chose two zones — Parameters and Lethality — so the comparison to the “all accidents” baseline updates in place as filters change. Designed mobile layout so controls and the rate stay usable on small screens. I pre-tested all the charts in Observable.",
+                "images": [
+                  {
+                    "src": "images/dtp-2.png",
+                    "alt": "Observable prototypes — lethality trends by vehicle manufacturer country",
+                    "caption": "Observable: prototype of a chart showing car-producing countries."
+                  }
+                ]
+              },
+              {
+                "id": "implementation",
+                "title": "2. Implementation",
+                "body": "Built the calculator in React with d3 for rate display; wired filter state to chart updates. Tested on mobile and desktop before release.",
+                "images": []
+              }
+            ]
+          },
+          "result": {
+            "text": "Live calculator at https://calc.tochno.st/dtp/: users test scenarios and compare lethality against the “all accidents” baseline — a tool for exploring risk factors, not only reading a chart."
+          }
+        }
+      },
+      "cost-of-living-calculator": {
+        "meta": {
+          "title": "Cost-of-living calculator",
+          "cardDescription": "Place your household on Russia's income distribution.",
+          "description": "Place your household on Russia's income distribution — with a regional cost-of-living adjustment, in a few clicks.",
+          "cardTags": ["editorial", "complex systems"],
+          "client": "To Be Precise, an independent think-tank that collects, cleans, and analyzes official and open-source statistics to study social problems in Russia (~50k MAU).",
+          "team": ["Designer & front-end developer (me)", "analyst", "editor"],
+          "role": "Design and front-end development: interaction model, UI, filter logic, production code.",
+          "years": "Dec 2025 – March 2026",
+          "stack": ["Observable", "Figma", "React", "TypeScript", "Vite", "d3.js"],
+          "links": [{ "label": "tochno.st/calc/", "url": "https://tochno.st/calc/" }]
+        },
+        "blocks": {
+          "problem": {
+            "text": "The editorial team wanted to highlight the uniqueness of the methodology and the data reconstructed through calculations. Previous coverage of this topic described the situation in the country level but did not drill down to the user context."
+          },
+          "summary": {
+            "items": [
+              "Based on reconstructed income distribution created an algorithm that prepared data for all the charts and factoids.",
+              "Prototyped chart behaviour in Observable, then designed web/mobile flow in Figma.",
+              "Shipped React + TypeScript app (Vite, d3, TanStack Query) with peer code review."
+            ]
+          },
+          "approach": {
+            "steps": [
+              {
+                "id": "data-logic",
+                "title": "0. Data & logic",
+                "body": "Analysts reconstructed the national income distribution from official aggregates and built a stepped income table with regional cost-of-living adjustment. Then I created an algorithm that processed raw data and output the specific segments needed for charts and headings. Validated outputs with analysts before moving to production UI.",
+                "images": [
+                  {
+                    "src": "images/income-1.png",
+                    "alt": "Income distribution table — regional correction steps for Altai Krai",
+                    "caption": "Original raw data: stepped income table with regional cost-of-living adjustment."
+                  }
+                ]
+              },
+              {
+                "id": "ui",
+                "title": "1. UI & interaction",
+                "body": "Prototyped chart updates in Observable on real data shapes. Designed an editorial flow inspired by WID / NYT income tools: enter income → adjust for region → see position on the distribution. Simplified the regional block on mobile so the chart stays primary.",
+                "images": [
+                  {
+                    "src": "images/income-2.mov",
+                    "alt": "Observable small-multiples prototype — income distribution by region",
+                    "caption": "Observable: animation test when switching display modes.",
+                    "type": "video"
+                  }
+                ]
+              },
+              {
+                "id": "implementation",
+                "title": "2. Implementation",
+                "body": "Built the production app in React 19 + TypeScript with Vite; d3 for the distribution chart; TanStack Query for data fetching. Delivered component by component with code review, then tested across devices before public launch.",
+                "images": []
+              }
+            ]
+          },
+          "result": {
+            "text": "Live calculator at https://tochno.st/calc/: users enter income, apply a regional adjustment, and see their position on the distribution. Methodology documented for reuse on the platform."
+          }
+        }
+      },
+      "c-level-dashboards-slides": {
+        "meta": {
+          "title": "C-level dashboards & slides",
+          "cardDescription": "Executive-ready data stories — decks, templates, and automation that teams can update without redesigning every month.",
+          "description": "Executive-ready data stories under time pressure — decks, templates, and automation that teams can update without redesigning every month.",
+          "cardTags": ["commercial", "automation"],
+          "clients": [
+            "Beeline (VEON) is one of the leading telecommunications and mobile network operator brands in Russia (10+m users).",
+            "Valiotti Analytics is a data strategy and analytics consulting firm specialising in BI and data visualisation."
+          ],
+          "role": "Presentation design, report templates, dashboard support, automation of recurring visual reports.",
+          "years": "Beeline: 2023–2024, Valiotti Analytics: 2024 (contract project)",
+          "stack": ["Figma", "PowerPoint", "Google Sheets", "Tableau"],
+          "links": []
+        },
+        "blocks": {
+          "problem": {
+            "text": "Data-heavy materials for CEO-1 / CEO-2 speakers and investment or budget committee defenses often failed under time pressure: too dense, inconsistent, slow to update. Recurring monthly reports duplicated manual work."
+          },
+          "approach": {
+            "steps": [
+              {
+                "id": "templates",
+                "title": "Templates",
+                "body": "Reusable systems for marketing research and status updates.",
+                "images": [
+                  {
+                    "src": "images/beeline.png",
+                    "alt": "Beeline executive slide templates — eNPS heatmaps, department breakdowns, geographic grids",
+                    "caption": "Beeline: PowerPoint templates for the semi-annual employee well-being report."
+                  }
+                ]
+              },
+              {
+                "id": "automation",
+                "title": "Automation",
+                "body": "Connected Google Sheets → Figma for monthly network-coverage maps. Automated map workflow saves ~6 hours of manual work per month.",
+                "images": []
+              },
+              {
+                "id": "dashboards",
+                "title": "Dashboards",
+                "body": "Conducted interviews with dashboard stakeholders, aligned on metrics and report structures, created and secured approval for prototypes, and — together with analysts — prepared and tested the final dashboards.",
+                "images": [
+                  {
+                    "src": "images/valiotti.png",
+                    "alt": "Valiotti Analytics Tableau dashboards — operational metrics and SLA tracking",
+                    "caption": "Valiotti Analytics: marketing and operational dashboards."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ru": {
+    "site": {
+      "name": "Таня Цвирова",
+      "title": "Специалист по визуализации данных, дизайнер, разработчик",
+      "tagline": "Комплексные системы, пространственные данные, интерактивные редакционные форматы.",
+      "email": "tanyacvirova@gmail.com"
+    },
+    "about": {
+      "text": "Привет! Меня зовут Таня Цвирова. Я проектирую и создаю продукты, основанные на данных: от исследования и UX/UI — до фронтенда, когда проект этого требует.\n\nПоследние пять лет я работала в проектах «Если быть точным», 2ГИС Компас, билайн и РБК: создавала графики, карты, калькуляторы и инструменты для широкой аудитории и вице-президентов. Автор и преподаватель на курсе «Визуализация данных и введение в BI‑инструменты» в Яндекс Практикуме.\n\nСейчас живу в Нагое (Япония, GMT+9), открыта к удаленной работе.\n\ntanyacvirova@gmail.com"
+    },
+    "projects": {
+      "15-minute-city": {
+        "meta": {
+          "title": "15-минутный город",
+          "cardDescription": "Часть проекта 2ГИС Компас — демонстрация инструментов пространственной аналитики 2ГИС.",
+          "description": "Изучите, насколько инфраструктура российских городов соответствует принципам 15-минутного города.",
+          "cardTags": ["редакционный", "пространственные данные"],
+          "client": "2ГИС Компас, бренд-медиа 2ГИС о городах и людях.",
+          "team": ["Специалист по визуализации данных (я)", "аналитик", "редактор", "дизайнер", "разработчики"],
+          "role": "Анализ данных, карты, графики, сценарий скроллителлинга и проработка интерактивных виджетов с разработчиками; финальные визуализации — с дизайнерами.",
+          "years": "2024–2025 (контракт; серия материалов для Компаса)",
+          "stack": ["Python", "QGIS", "Figma"],
+          "links": [
+            { "label": "compass.2gis.ru/15-minute", "url": "https://compass.2gis.ru/15-minute/" },
+            { "label": "Другие проекты Компаса", "url": "https://compass.2gis.ru/" }
+          ]
+        },
+        "blocks": {
+          "problem": {
+            "text": "Каждый материал Компаса должен был одновременно привлекать внимание широкой аудитории и демонстрировать пространственные данные и технологии 2ГИС. Мой фокус — на материале про 15-минутные города, где точки на карте и изохроны превратились в понятную локальную картографическую историю."
+          },
+          "summary": {
+            "items": [
+              "Нашла историю за выбранной технологией — изохронами.",
+              "Проанализировала объекты 2GIS и 15-минутные изохроны по четырём городам.",
+              "Создала карты и интерактивные виджеты, которые показывают пространственный стек."
+            ]
+          },
+          "approach": {
+           "steps": [
+             {
+               "id": "reader-brief",
+               "title": "0. Читатель и задача",
+               "body": "Сформулировала вопрос, который заинтересует читателя: «где пешая доступность работает локально». Совместила его с ограничением заказчика — технологии видны в истории, а не только в демо-продукте.",
+               "images": []
+             },
+             {
+               "id": "data-analysis",
+               "title": "1. Данные и анализ",
+               "body": "Работала с объектами 2ГИС, категориями сервисов и 15-минутными пешими изохронами в четырех крупных городах России. Сравнила доступность по районами и типам застройки. Вместо одного индекса на город — подробные карты с конкретными районами доступности.",
+               "images": [
+                 {
+                   "src": "images/compass-1.png",
+                   "alt": "Карты изохрон — Нижний Новгород, Казань и Санкт-Петербург; многоквартирные дома и частный сектор",
+                   "caption": "Результаты предварительного анализа: на карты добавлен слой с типами застройки — частные дома и многоквартирные здания."
+                 }
+               ]
+             },
+             {
+               "id": "narrative-visuals",
+               "title": "2. Нарратив и визуал",
+               "body": "Убрала перегруженные черновики, оставила визуализацию тезиса «в исторических центральных районах российских городов пешая доступность примерно вдвое выше, чем в советских кварталах с многоэтажной застройкой, и втрое выше, чем в частном секторе на окраинах.». Собрала порядок скролла: один главный вывод на блок; детали — во второстепенных картах.",
+               "images": []
+             },
+             {
+               "id": "widgets",
+               "title": "3. Виджеты и geo-dev",
+               "body": "Вместе с командой разработки прорабатывала интерактивные виджеты для других материалов Компаса, например интерактивную карту «Как меняется доступность районов с открытием станций». Тот же принцип: пространственные возможности читаются внутри истории. Финальные карты и графики разрабатывала вместе с дизайнерами проекта.",
+               "images": [
+                 {
+                   "src": "images/compass-2.png",
+                   "alt": "Виджет Transport 2030 — таймлайн изохрон и доступность районов при открытии станций",
+                   "caption": "Финальный виджет «Как меняется доступность районов с открытием станций», который я разработала вместе с разработчиками и дизайнером."
+                 }
+               ]
+             }
+           ]
+         },
+         "result": {
+           "text": "Лонгрид «Всё рядом: как 15-минутные города делают жизнь лучше» — пространственная история по четырем крупным городам России: доступнее в центрах, проблематичнее на окраинах и в частном секторе. А также интерактивные виджеты в других материалах Компаса."
+         }
+       }
+     },
+     "social-indicators-data-explorer": {
+       "meta": {
+         "title": "Конструктор социальных показателей",
+         "cardDescription": "Исследуйте ключевые социальные показатели и сравнивайте регионы России.",
+         "description": "Исследуйте ключевые социальные показатели и сравнивайте регионы России — без скачивания и самостоятельной обработки больших датасетов.",
+         "cardTags": ["продуктовый дизайн", "комплексная система"],
+         "client": "«Если быть точным», платформа с исследованиями и открытыми данными о социальных проблемах в России (~50k MAU).",
+         "team": ["Продуктовый дизайнер (я)", "аналитики", "разработчики"],
+         "role": "Полный цикл проектирования продукта: UX/UI, состояния, mobile, спецификации для разработчиков.",
+         "years": "Май–авг. 2026",
+         "stack": ["Figma", "design tokens", "Dev Mode"],
+         "product": "Универсальный модуль с графиками для страницы социальной проблемы.",
+         "links": [
+           {
+             "label": "tochno.st/problems/orphanhood",
+             "url": "https://tochno.st/problems/orphanhood"
+           }
+         ]
+       },
+       "blocks": {
+         "beforeAfter": {
+           "before": "Скачать архив >10 МБ и обработать данные вручную.",
+           "after": "Выбрать показатель, сравнить регионы, выгрузить или поделиться срезом в интерфейсе."
+         },
+         "problem": {
+           "text": "Читателям и партнерам нужны были быстрые ответы из данных, которые были доступны только в рейтингах, исследованиях или тяжелых архивах. Цель v1: сделать сравнение регионов в рамках одного кураторского показателя быстрым — чтобы команда перестала вручную закрывать одни и те же точечные запросы."
+         },
+         "summary": {
+           "items": [
+             "Разбор запросов в бот и потребностей аудитории → v1: одно измерение + сравнение регионов.",
+             "10+ экранов web/mobile; адаптация DS сайта под data UI.",
+             "Передача через Dev Mode, QA на устройствах."
+           ]
+         },
+         "process": {
+           "steps": [
+             {
+               "id": "research",
+               "title": "0. Идея и исследование",
+               "body": "Я разобрала повторяющиеся запросы в командный бот и обсудила с редакторами проекта, как читатели пользуются страницами проблем. Вывод: пользователям с низкими техническими навыками нужен «интерфейсный» слой поверх сырых данных — по образцу конструкторов OWID (https://ourworldindata.org/explorers).",
+               "images": []
+             },
+             {
+               "id": "prototypes",
+               "title": "1. Прототипы",
+               "body": "Первые прототипы покрывали все комбинации режимов. После тестирования я зафиксировала v1: один показатель и сравнение регионов — достаточная ценность без перегруза UI.",
+               "images": [
+                 {
+                   "src": "images/explorer-1.png",
+                   "alt": "Прототипный сценарий — выбор приоритетного сценария для сравнения регионов",
+                   "caption": "Процесс выбора приоритетного сценария: результат — сравнение одного показателя по регионам."
+                 }
+               ]
+             },
+             {
+               "id": "design",
+               "title": "2. Дизайн",
+               "body": "Спроектировала 10+ экранов для web и mobile, адаптировала DS сайта под графики: палитра, иконки, контролы. Передача через Figma Dev Mode со спецификациями состояний и edge cases.",
+               "images": [
+                 {
+                   "src": "images/explorer-2.png",
+                   "alt": "Макеты в Figma — конструктор показателей, mobile, тултипы и экспорт",
+                   "caption": "Финальные прототипы, готовые к передаче в разработку, в Figma."
+                 }
+               ]
+             },
+             {
+               "id": "qa",
+               "title": "3. Поддержка разработки и QA",
+               "body": "Работала с разработчиками над соответствием макетам и бизнес-логике, решала компромиссы дизайн/разработка, тестировала на устройствах и в браузерах перед запуском.",
+               "images": []
+             }
+           ]
+         },
+         "result": {
+           "text": "После запуска сократилось число точечных запросов в командный бот — главная внутренняя метрика успеха v1. Читатели сравнивают регионы и выгружают/шэрят срез без обращения к команде за кастомной выборкой."
+         }
+       }
+     },
+     "traffic-accident-fatalities": {
+       "meta": {
+         "title": "Смертность в ДТП",
+         "cardDescription": "Узнайте, как обстоятельства аварии связаны с риском гибели — и сравните свой сценарий со статистикой по всем ДТП за секунды.",
+         "description": "Узнайте, как обстоятельства аварии связаны с риском гибели — и сравните свой сценарий со статистикой по всем ДТП за секунды.",
+         "cardTags": ["научный", "комплексная система"],
+         "client": "«Если быть точным», платформа с исследованиями и открытыми данными о социальных проблемах в России (~50k MAU).",
+         "team": ["Дизайнер и фронтенд-разработчик (я)", "аналитик", "редактор"],
+         "role": "Дизайн и фронтенд-разработка: модель взаимодействия, интерфейс, логика фильтров, код.",
+         "years": "Фев.–июнь 2026",
+         "stack": ["Figma", "React", "TypeScript", "Vite", "d3.js", "Node.js", "Redis"],
+         "links": [{ "label": "calc.tochno.st/dtp/", "url": "https://calc.tochno.st/dtp/" }]
+       },
+       "blocks": {
+         "problem": {
+           "text": "Статистика о 1,47 млн аварий — слишком большой объем информации для статичных графиков. Было два возможных решения: выбрать подмножество переменных и сделать исследование только на них, либо дать читателю самому сделать выбор."
+         },
+         "summary": {
+           "items": [
+             "Метрика как летальность при условии ДТП; карта допустимых комбинаций фильтров в датасете.",
+             "Алгоритм поиска нужной комбинации среди более миллиона строк и Redis-хранилище для ответов за секунды.",
+             "Две колонки: параметры редактируются, сравнение с базой всегда на экране.",
+             "Макеты в Figma, релиз на React + d3."
+           ]
+         },
+         "approach": {
+           "steps": [
+             {
+               "id": "data-logic",
+               "title": "0. Данные и логика",
+               "body": "Сопоставила, какие комбинации фильтров есть в датасете, и ограничила UI осмысленными парами — без «мертвых» состояний, которые не показывают результат. Backend на Node.js использует уникальный ключ на основе комбинации выбранных пользователем параметров.",
+               "images": [
+                 {
+                   "src": "images/dtp-1.png",
+                   "alt": "Структура JSON — ставки летальности по типу ДТП с доверительными интервалами",
+                   "caption": "Обработанная таблица, которую backend использует при запросе к данным."
+                 }
+               ]
+             },
+             {
+               "id": "ui",
+               "title": "1. UI и взаимодействие",
+               "body": "Сравнила длинную форму и схему в две колонки; выбрала две зоны — Параметры и Летальность — чтобы сравнение с базой «все ДТП» всегда было перед глазами при смене фильтров. На mobile контролы и показатель остаются читаемыми. Все графики предварительно протестировала в Observable.",
+               "images": [
+                 {
+                   "src": "images/dtp-2.png",
+                   "alt": "Прототипы в Observable — динамика летальности по стране-производителю",
+                   "caption": "Observable: прототип графика по странам-производителям автомобилей."
+                 }
+               ]
+             },
+             {
+               "id": "implementation",
+               "title": "2. Реализация",
+               "body": "Собрала калькулятор на React, d3 — для отображения графиков риска. Состояние фильтров скоординировано с обновлениями графиков. Тест на mobile и desktop перед релизом.",
+               "images": []
+             }
+           ]
+         },
+         "result": {
+           "text": "Калькулятор в проде: пользователь проверяет сценарии и сравнивает летальность с базой «все ДТП» — инструмент для исследования факторов риска, а не только график в статье."
+         }
+       }
+     },
+     "cost-of-living-calculator": {
+       "meta": {
+         "title": "Калькулятор уровня жизни",
+         "cardDescription": "Найдите место семьи в распределении доходов по России.",
+         "description": "Найдите место семьи в распределении доходов по России — с поправкой на стоимость жизни в регионе, за несколько кликов.",
+         "cardTags": ["редакционный", "комплексная система"],
+         "client": "«Если быть точным», платформа с исследованиями и открытыми данными о социальных проблемах в России (~50k MAU).",
+         "team": ["Дизайнер и фронтенд-разработчик (я)", "аналитик", "редактор"],
+         "role": "Дизайн и фронтенд-разработка: модель взаимодействия, интерфейс, логика фильтров, код.",
+         "years": "Дек. 2025 – март 2026",
+         "stack": ["Observable", "Figma", "React", "TypeScript", "Vite", "d3.js"],
+         "links": [{ "label": "tochno.st/calc/", "url": "https://tochno.st/calc/" }]
+       },
+       "blocks": {
+         "problem": {
+           "text": "Редакционной команде нужно было показать уникальность методологии и данных, восстановленных через расчеты. Предыдущие материалы на эту тему описывали ситуацию на уровне страны, но не переходили к контексту конкретного пользователя."
+         },
+         "summary": {
+           "items": [
+             "На основе восстановленного распределения доходов создала алгоритм подготовки данных для графиков и заголовков.",
+             "Прототипы графиков в Observable, затем сценарий web/mobile в Figma.",
+             "Релиз на React + TypeScript (Vite, d3, TanStack Query)."
+           ]
+         },
+         "approach": {
+           "steps": [
+             {
+               "id": "data-logic",
+               "title": "0. Данные и логика",
+               "body": "Аналитики восстановили национальное распределение доходов из официальных агрегатов и собрали таблицу с шагом дохода и региональной поправкой на стоимость жизни. Затем я создала алгоритм, который обрабатывал сырые данные и выдавал нужные сегменты для графиков и заголовков. Сверила результат с аналитиками до продакшен-UI.",
+               "images": [
+                 {
+                   "src": "images/income-1.png",
+                   "alt": "Таблица распределения доходов — шаги и региональная поправка на примере Алтайского края",
+                   "caption": "Исходные данные: таблица доходов с шагом и региональной поправкой на стоимость жизни."
+                 }
+               ]
+             },
+             {
+               "id": "ui",
+               "title": "1. UI и взаимодействие",
+               "body": "Прототипировала обновление графиков в Observable на реальных данных. Спроектировала путь читателя с опорой на WID / NYT: ввод дохода → учёт региона → место в распределении. На mobile упростила блок со всеми 85 регионами, чтобы сократить время скролла.",
+               "images": [
+                 {
+                   "src": "images/income-2.mov",
+                   "alt": "Прототип small multiples в Observable — распределение доходов по регионам",
+                   "caption": "Observable: тест анимации при переключении режимов отображения.",
+                   "type": "video"
+                 }
+               ]
+             },
+             {
+               "id": "implementation",
+               "title": "2. Реализация",
+               "body": "Собрала продакшен на React 19 + TypeScript и Vite; d3 — для графиков распределения; TanStack Query — для загрузки данных. Тестировала на различных устройствах и браузерах, контролировала публичный запуск.",
+               "images": []
+             }
+           ]
+         },
+         "result": {
+           "text": "Калькулятор в проде: пользователь вводит доход, учитывает регион и видит себя в распределении. Методология задокументирована для повторного использования на платформе."
+         }
+       }
+     },
+     "c-level-dashboards-slides": {
+       "meta": {
+         "title": "Дашборды и слайды для CEO-1 и CEO-2",
+         "cardDescription": "Автоматизированные слайды и шаблоны, которые команды обновляют самостоятельно без пересборки каждый месяц.",
+         "description": "Основанные на данных презентации для CEO-1 и CEO-2, автоматизированные слайды и шаблоны, которые команды обновляют самостоятельно без пересборки каждый месяц.",
+         "cardTags": ["коммерческий", "автоматизация"],
+         "clients": [
+           "билайн",
+           "Valiotti Analytics — консалтинговая компания по стратегии и аналитике, специализация — BI и визуализация данных."
+         ],
+         "role": "Дизайн презентаций, шаблоны отчетов, поддержка дашбордов, автоматизация регулярных визуальных отчетов.",
+         "years": "билайн: 2023–2024, Valiotti Analytics: 2024 (контракт)",
+         "stack": ["Figma", "PowerPoint", "Google Sheets", "Tableau"],
+         "links": []
+       },
+       "blocks": {
+         "problem": {
+           "text": "Материалы с данными для спикеров CEO-1 / CEO-2 и защит на инвестиционных и бюджетных комитетах часто были перегружены, оформлены по-разному, требовали результата в короткие сроки. Ежемесячные отчеты требовали постоянной ручной работы."
+         },
+         "approach": {
+           "steps": [
+             {
+               "id": "templates",
+               "title": "Шаблоны",
+               "body": "Переиспользуемые системы для маркетинговых исследований и оперативных статусов.",
+               "images": [
+                 {
+                   "src": "images/beeline.png",
+                   "alt": "Шаблоны слайдов билайн — eNPS, департаменты, географическая сетка",
+                   "caption": "билайн: PowerPoint-шаблоны для полугодового отчета о благополучии сотрудников."
+                 }
+               ]
+             },
+             {
+               "id": "automation",
+               "title": "Автоматизация",
+               "body": "Связала Google Sheets → Figma для ежемесячных карт покрытия сети. Автоматизация экономит ~6 часов ручной работы в месяц.",
+               "images": []
+             },
+             {
+               "id": "dashboards",
+               "title": "Дашборды",
+               "body": "Провела интервью со стейкхолдерами дашбордов, согласовала метрики и структуру отчетов, подготовила и согласовала прототипы, а вместе с аналитиками — финальные дашборды и их тестирование.",
+               "images": [
+                 {
+                   "src": "images/valiotti.png",
+                   "alt": "Дашборды Valiotti Analytics в Tableau — операционные метрики и SLA",
+                   "caption": "Valiotti Analytics: маркетинговые и операционные дашборды."
+                 }
+               ]
+             }
+           ]
+         }
+       }
+     }
+   }
+ }
+}

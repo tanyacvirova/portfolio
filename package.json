@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "spell": "cspell 'src/**/*.ts' 'src/**/*.tsx' 'src/**/*.css' 'src/**/*.json' index.html cspell.json"
+  },
+  "dependencies": {
+    "@react-spring/web": "^10.1.2",
+    "classnames": "^2.5.1",
+    "d3": "^7.9.0",
+    "d3-sankey": "^0.12.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.13",
+    "@cspell/dict-ru_ru": "^2.3.2",
+    "@types/d3": "^7.4.3",
+    "@types/d3-sankey": "^0.12.5",
+    "@types/node": "^22.20.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "cspell": "^10.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

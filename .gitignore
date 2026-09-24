@@ -1,0 +1,26 @@
+# Dependencies and build
+node_modules
+dist
+dist-ssr
+*.local
+.venv
+
+# Working notes, CVs, unused source copies
+artifacts
+review_previews
+/icons
+
+# Editor and OS
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+.cursor
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*

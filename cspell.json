@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "language": "en,ru",
+  "import": ["@cspell/dict-ru_ru/cspell-ext.json"],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "artifacts",
+    "icons",
+    "portfolio.json",
+    "src/assets"
+  ],
+  "words": [
+    "biomejs",
+    "classnames",
+    "tochno",
+    "Tsvirova",
+    "tanyacvirova",
+    "tsbuildinfo"
+  ]
+}

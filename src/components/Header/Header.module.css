@@ -1,0 +1,144 @@
+.header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--step-display);
+  font-weight: 700;
+  line-height: var(--leading-display);
+  color: inherit;
+  text-decoration: none;
+  text-wrap: balance;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-size: var(--step-nav);
+  font-weight: 400;
+  line-height: var(--leading-lead);
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.linkActive {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.themeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.themeIcon {
+  width: 32px;
+  height: 32px;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.themeMoon {
+  mask-image: url("../../assets/icons/theme-moon.svg");
+}
+
+.themeSun {
+  width: 28px;
+  height: 28px;
+  mask-image: url("../../assets/icons/theme-sun.svg");
+}
+
+.langSwitch {
+  display: flex;
+  align-items: center;
+  min-inline-size: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+}
+
+.langLegend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.langOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: var(--step-nav);
+  line-height: var(--leading-lead);
+  color: var(--text);
+  border: 1px solid var(--text);
+}
+
+.langOptionActive {
+  color: var(--inverse);
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.close {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    flex-wrap: wrap;
+    padding: var(--page-padding) 0;
+    background: var(--bg);
+  }
+
+  .name {
+    display: none;
+  }
+
+  .actions {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .themeButton {
+    margin-left: auto;
+  }
+
+  .close {
+    display: block;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: currentColor;
+    mask-image: url("../../assets/icons/close.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
