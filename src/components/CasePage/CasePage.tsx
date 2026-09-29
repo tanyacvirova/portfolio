@@ -2,7 +2,7 @@ import cn from "classnames";
 import { useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { useLocale } from "../../context/LocaleContext";
-import { getProject, isProjectId } from "../../data/content";
+import { caseMediaUrl, getProject, isProjectId } from "../../data/content";
 import type { ProjectImage } from "../../data/types";
 import { ui } from "../../data/ui";
 import styles from "./CasePage.module.css";
@@ -25,10 +25,6 @@ function outIconClass(url: string) {
   return undefined;
 }
 
-function mediaSrc(path: string) {
-  return `${import.meta.env.BASE_URL}${path}`;
-}
-
 function CaseMedia({ image }: { image: ProjectImage }) {
   const [hidden, setHidden] = useState(false);
 
@@ -41,7 +37,7 @@ function CaseMedia({ image }: { image: ProjectImage }) {
       {image.type === "video" ? (
         <video
           className={styles.media}
-          src={mediaSrc(image.src)}
+          src={caseMediaUrl(image.src)}
           controls
           onError={() => setHidden(true)}
         >
@@ -50,7 +46,7 @@ function CaseMedia({ image }: { image: ProjectImage }) {
       ) : (
         <img
           className={styles.media}
-          src={mediaSrc(image.src)}
+          src={caseMediaUrl(image.src)}
           alt={image.alt}
           onError={() => setHidden(true)}
         />

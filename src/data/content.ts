@@ -72,3 +72,28 @@ export function getProject(locale: Locale, id: ProjectId): Project {
 export function isProjectId(value: string): value is ProjectId {
   return PROJECT_IDS.has(value as ProjectId);
 }
+
+export function caseMediaUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path}`;
+}
+
+export function caseMediaPaths(): string[] {
+  const paths = new Set<string>();
+
+  for (const bundle of Object.values(bundles)) {
+    for (const project of Object.values(bundle.projects)) {
+      const steps = [
+        ...(project.blocks.approach?.steps ?? []),
+        ...(project.blocks.process?.steps ?? []),
+      ];
+
+      for (const step of steps) {
+        for (const image of step.images) {
+          paths.add(image.src);
+        }
+      }
+    }
+  }
+
+  return [...paths];
+}
