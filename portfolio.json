@@ -51,7 +51,7 @@
                 "body": "Worked with 2GIS places, service categories and 15-minute walking isochrones in four megacities. Compared neighbourhood access across centre, periphery and private-housing areas instead of collapsing each city into one index.",
                 "images": [
                   {
-                    "src": "images/compass-1.png",
+                    "src": "images/compass-1.webp",
                     "alt": "Isochrone maps for Nizhny Novgorod, Kazan and Saint Petersburg — apartment blocks vs private housing",
                     "caption": "Results of the preliminary analysis: added a layer to the maps showing building types — detached houses and apartment buildings."
                   }
@@ -69,7 +69,7 @@
                 "body": "With the geo-development team, shaped interactive map widgets for other Compass stories — e.g. station growth over time on Transport 2030. Same principle: spatial capabilities readable inside the narrative. Prepared final maps and charts with project designers.",
                 "images": [
                   {
-                    "src": "images/compass-2.png",
+                    "src": "images/compass-2.webp",
                     "alt": "Transport 2030 widget — isochrone timeline showing how district accessibility changes as stations open",
                     "caption": "Final widget from “Transport 2030” I developed in collaboration with geo developers and a designer."
                   }
@@ -130,7 +130,7 @@
                 "body": "Early prototypes tried to support every display combination. After testing, I scoped v1 to selecting one metric and comparing regions — enough value without overwhelming the UI.",
                 "images": [
                   {
-                    "src": "images/explorer-1.png",
+                    "src": "images/explorer-1.webp",
                     "alt": "Prototype flow — selecting a priority scenario for region comparison",
                     "caption": "Process of selecting a priority scenario: the result is a comparison based on a single indicator across regions."
                   }
@@ -142,7 +142,7 @@
                 "body": "I designed 10+ screens for web and mobile, adapting the site design system for charts: palette, icons, controls. Handoff via Figma Dev Mode with specs for states and edge cases.",
                 "images": [
                   {
-                    "src": "images/explorer-2.png",
+                    "src": "images/explorer-2.webp",
                     "alt": "Figma screens — indicator constructor, mobile layouts, tooltips and export states",
                     "caption": "Dev-ready final prototypes made in Figma."
                   }
@@ -194,7 +194,7 @@
                 "body": "Mapped which filter combinations exist in the dataset and limited the UI to meaningful pairs — so users never hit dead-end states without explanation. Node.js back-end uses unique key based on combination of different parameters user selected.",
                 "images": [
                   {
-                    "src": "images/dtp-1.png",
+                    "src": "images/dtp-1.webp",
                     "alt": "JSON data structure — fatality rates by accident type with confidence intervals",
                     "caption": "The processed table used by the backend when requesting data."
                   }
@@ -206,7 +206,7 @@
                 "body": "Compared a long single-column form vs a side-by-side layout; chose two zones — Parameters and Lethality — so the comparison to the “all accidents” baseline updates in place as filters change. Designed mobile layout so controls and the rate stay usable on small screens. I pre-tested all the charts in Observable.",
                 "images": [
                   {
-                    "src": "images/dtp-2.png",
+                    "src": "images/dtp-2.webp",
                     "alt": "Observable prototypes — lethality trends by vehicle manufacturer country",
                     "caption": "Observable: prototype of a chart showing car-producing countries."
                   }
@@ -257,7 +257,7 @@
                 "body": "Analysts reconstructed the national income distribution from official aggregates and built a stepped income table with regional cost-of-living adjustment. Then I created an algorithm that processed raw data and output the specific segments needed for charts and headings. Validated outputs with analysts before moving to production UI.",
                 "images": [
                   {
-                    "src": "images/income-1.png",
+                    "src": "images/income-1.webp",
                     "alt": "Income distribution table — regional correction steps for Altai Krai",
                     "caption": "Original raw data: stepped income table with regional cost-of-living adjustment."
                   }
@@ -316,7 +316,7 @@
                 "body": "Reusable systems for marketing research and status updates.",
                 "images": [
                   {
-                    "src": "images/beeline.png",
+                    "src": "images/beeline.webp",
                     "alt": "Beeline executive slide templates — eNPS heatmaps, department breakdowns, geographic grids",
                     "caption": "Beeline: PowerPoint templates for the semi-annual employee well-being report."
                   }
@@ -334,7 +334,7 @@
                 "body": "Conducted interviews with dashboard stakeholders, aligned on metrics and report structures, created and secured approval for prototypes, and — together with analysts — prepared and tested the final dashboards.",
                 "images": [
                   {
-                    "src": "images/valiotti.png",
+                    "src": "images/valiotti.webp",
                     "alt": "Valiotti Analytics Tableau dashboards — operational metrics and SLA tracking",
                     "caption": "Valiotti Analytics: marketing and operational dashboards."
                   }
@@ -398,7 +398,7 @@
                "body": "Работала с объектами 2ГИС, категориями сервисов и 15-минутными пешими изохронами в четырех крупных городах России. Сравнила доступность по районами и типам застройки. Вместо одного индекса на город — подробные карты с конкретными районами доступности.",
                "images": [
                  {
-                   "src": "images/compass-1.png",
+                   "src": "images/compass-1.webp",
                    "alt": "Карты изохрон — Нижний Новгород, Казань и Санкт-Петербург; многоквартирные дома и частный сектор",
                    "caption": "Результаты предварительного анализа: на карты добавлен слой с типами застройки — частные дома и многоквартирные здания."
                  }
@@ -416,7 +416,7 @@
                "body": "Вместе с командой разработки прорабатывала интерактивные виджеты для других материалов Компаса, например интерактивную карту «Как меняется доступность районов с открытием станций». Тот же принцип: пространственные возможности читаются внутри истории. Финальные карты и графики разрабатывала вместе с дизайнерами проекта.",
                "images": [
                  {
-                   "src": "images/compass-2.png",
+                   "src": "images/compass-2.webp",
                    "alt": "Виджет Transport 2030 — таймлайн изохрон и доступность районов при открытии станций",
                    "caption": "Финальный виджет «Как меняется доступность районов с открытием станций», который я разработала вместе с разработчиками и дизайнером."
                  }
@@ -477,7 +477,7 @@
                "body": "Первые прототипы покрывали все комбинации режимов. После тестирования я зафиксировала v1: один показатель и сравнение регионов — достаточная ценность без перегруза UI.",
                "images": [
                  {
-                   "src": "images/explorer-1.png",
+                   "src": "images/explorer-1.webp",
                    "alt": "Прототипный сценарий — выбор приоритетного сценария для сравнения регионов",
                    "caption": "Процесс выбора приоритетного сценария: результат — сравнение одного показателя по регионам."
                  }
@@ -489,7 +489,7 @@
                "body": "Спроектировала 10+ экранов для web и mobile, адаптировала DS сайта под графики: палитра, иконки, контролы. Передача через Figma Dev Mode со спецификациями состояний и edge cases.",
                "images": [
                  {
-                   "src": "images/explorer-2.png",
+                   "src": "images/explorer-2.webp",
                    "alt": "Макеты в Figma — конструктор показателей, mobile, тултипы и экспорт",
                    "caption": "Финальные прототипы, готовые к передаче в разработку, в Figma."
                  }
@@ -541,7 +541,7 @@
                "body": "Сопоставила, какие комбинации фильтров есть в датасете, и ограничила UI осмысленными парами — без «мертвых» состояний, которые не показывают результат. Backend на Node.js использует уникальный ключ на основе комбинации выбранных пользователем параметров.",
                "images": [
                  {
-                   "src": "images/dtp-1.png",
+                   "src": "images/dtp-1.webp",
                    "alt": "Структура JSON — ставки летальности по типу ДТП с доверительными интервалами",
                    "caption": "Обработанная таблица, которую backend использует при запросе к данным."
                  }
@@ -553,7 +553,7 @@
                "body": "Сравнила длинную форму и схему в две колонки; выбрала две зоны — Параметры и Летальность — чтобы сравнение с базой «все ДТП» всегда было перед глазами при смене фильтров. На mobile контролы и показатель остаются читаемыми. Все графики предварительно протестировала в Observable.",
                "images": [
                  {
-                   "src": "images/dtp-2.png",
+                   "src": "images/dtp-2.webp",
                    "alt": "Прототипы в Observable — динамика летальности по стране-производителю",
                    "caption": "Observable: прототип графика по странам-производителям автомобилей."
                  }
@@ -604,7 +604,7 @@
                "body": "Аналитики восстановили национальное распределение доходов из официальных агрегатов и собрали таблицу с шагом дохода и региональной поправкой на стоимость жизни. Затем я создала алгоритм, который обрабатывал сырые данные и выдавал нужные сегменты для графиков и заголовков. Сверила результат с аналитиками до продакшен-UI.",
                "images": [
                  {
-                   "src": "images/income-1.png",
+                   "src": "images/income-1.webp",
                    "alt": "Таблица распределения доходов — шаги и региональная поправка на примере Алтайского края",
                    "caption": "Исходные данные: таблица доходов с шагом и региональной поправкой на стоимость жизни."
                  }
@@ -663,7 +663,7 @@
                "body": "Переиспользуемые системы для маркетинговых исследований и оперативных статусов.",
                "images": [
                  {
-                   "src": "images/beeline.png",
+                   "src": "images/beeline.webp",
                    "alt": "Шаблоны слайдов билайн — eNPS, департаменты, географическая сетка",
                    "caption": "билайн: PowerPoint-шаблоны для полугодового отчета о благополучии сотрудников."
                  }
@@ -681,7 +681,7 @@
                "body": "Провела интервью со стейкхолдерами дашбордов, согласовала метрики и структуру отчетов, подготовила и согласовала прототипы, а вместе с аналитиками — финальные дашборды и их тестирование.",
                "images": [
                  {
-                   "src": "images/valiotti.png",
+                   "src": "images/valiotti.webp",
                    "alt": "Дашборды Valiotti Analytics в Tableau — операционные метрики и SLA",
                    "caption": "Valiotti Analytics: маркетинговые и операционные дашборды."
                  }
